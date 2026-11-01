@@ -1,7 +1,6 @@
 Pneumatica Didatica
 
 Project contributor: Eduardo Augusto de Foggi Carioli.
-Generative AI assisted implementation, documentation and computational tests.
 Numerical results require independent technical review.
 
 Hopsan API and original reference components: Hopsan Group, Linkoping University.
