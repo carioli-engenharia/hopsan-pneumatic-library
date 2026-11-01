@@ -1,0 +1,162 @@
+PNEUMÁTICA DIDÁTICA — versão 0.4 — 01/11/2026
+
+FINALIDADE
+Montar circuitos pneumáticos com válvulas prontas, sem reconstruir a cada uso
+as passagens internas e a lógica de seleção. São 24 componentes nativos, dez circuitos prontos sem os subsistemas legados usados no acervo acadêmico. O nome do autor consta apenas em AUTORIA.txt.
+
+INSTALAÇÃO E PRIMEIRO USO
+1. Extraia a pasta inteira Library; mantenha DLL, XML e SVG juntos.
+2. No Hopsan 2.24.4, clique em Load external library no painel esquerdo.
+3. Selecione a pasta Library. Aparecerá PneumaticaDidatica.
+4. Expanda a biblioteca e arraste a válvula desejada para o circuito.
+5. Conecte P à alimentação, A/B às câmaras do atuador e R/S às condições de
+   exaustão. São portas NodePneumatic, incompatíveis com portas hidráulicas.
+6. Ligue um sinal ao terminal u, ou configure u#Value nas propriedades.
+7. Abra um arquivo Exemplo_CPC_Valvula*.hmf e pressione Simulate. Os exemplos
+   usam volumes pneumáticos para isolar e demonstrar as passagens da válvula.
+   Veja as pressões de Valvula.A e Valvula.B no painel de gráficos.
+
+O arquivo pneumaticadidatica_v04.dll foi compilado para Windows 64 bits com o
+compilador oficial do Hopsan 2.24.4. Outros sistemas e versões exigem recompilar
+ValvulasPneumaticas.cpp contra a versão local de HopsanCore. O código-fonte está
+incluído. Não há instalação de serviço, comunicação com CLP ou acesso à rede.
+
+PORTAS E COMANDOS
+1 = P: alimentação; 2 = A e 4 = B: trabalho; 3 = R e 5 = S: exaustões.
+u é um sinal numérico de simulação; não representa uma porta pneumática nem
+uma interface elétrica física. As bobinas no símbolo representam o comando
+ideal. Os exemplos não modelam consumo elétrico, pilotagem nem tempo do carretel.
+
+3/2 normalmente fechada:
+  u < 0,5: A–R, P bloqueada; u >= 0,5: P–A, R bloqueada.
+3/2 normalmente aberta:
+  u < 0,5: P–A, R bloqueada; u >= 0,5: A–R, P bloqueada.
+5/2 retorno por mola:
+  u < 0,5: P–B e A–R, S bloqueada;
+  u >= 0,5: P–A e B–S, R bloqueada.
+5/2 biestável:
+  u >= 0,5: P–A e B–S; u <= -0,5: P–B e A–R;
+  entre os limites: conserva a posição anterior. Inicializa em P–B/A–R.
+5/3, em todas as variantes:
+  u >= 0,5: P–A e B–S; u <= -0,5: P–B e A–R.
+  -0,5 < u < 0,5: posição central, conforme abaixo.
+  Centro fechado: todas as passagens bloqueadas.
+  Centro em exaustão: A–R e B–S; P bloqueada.
+  Centro pressurizado: P–A e P–B; R e S bloqueadas.
+
+O termo genérico “centro aberto” foi substituído pela conexão exata. Centro em
+exaustão não significa que alimentação e todas as saídas estão interligadas.
+Não foi implementada uma variante que descarregue P diretamente à atmosfera.
+
+PARÂMETROS
+A_passagem: área efetiva de CADA passagem aberta, m²; padrão 8e-6 m².
+Cd: coeficiente de descarga, adimensional, 0 < Cd <= 1; padrão 0,65.
+Use pressões ABSOLUTAS em Pa e temperaturas em K. Por exemplo, 600000 Pa são
+6 bar absolutos, aproximadamente 5 bar manométricos com atmosfera de 1 bar.
+Para converter vazão mássica em vazão normal, declare antes a temperatura e a
+pressão da condição de referência. A área efetiva não é uma especificação Kv.
+
+MODELO E LIMITAÇÕES
+Ar ideal: R = 287 J/(kg K), kappa = 1,4 e cp = 1004,5 J/(kg K).
+Escoamento compressível quase estacionário, subsônico ou estrangulado, com
+reversão segundo a diferença de pressão; transporte de entalpia calculado pela
+temperatura de montante. As conexões conservam massa e energia. O sistema
+resolve implicitamente as relações TLM de pressão e fluxo de energia do Hopsan.
+Regularização somente para diferenças de pressão inferiores a 1 Pa.
+Passagens fechadas têm vazamento zero e a troca de posição é instantânea.
+Não modela atrito, histerese mecânica, sobreposição do carretel, pilotagem,
+condensação, vazamentos reais ou restrição de silenciadores. Não equivale a um
+produto comercial, certificação de segurança ou validação experimental.
+O cálculo interrompe a simulação se os parâmetros forem inválidos ou o solver
+não convergir. Nesse caso, conferir as condições de contorno e reduzir o passo.
+
+VALIDAÇÃO REALIZADA
+56 ensaios automatizados: 42 condições estáticas (sete válvulas, três comandos,
+fluxo direto e reverso), sete sequências dinâmicas e sete comparações de passo.
+Verificados: conexões da tabela, portas bloqueadas, balanços de massa e energia,
+convergência e pressões finais. A biestável conservou a posição após retirar u.
+Passos comparados: 0,0001 e 0,00005 s. Resultados em validacao_valvulas.json;
+dados e registros em testes; gráficos *_ensaio.png. A 5/3 em exaustão também
+foi carregada e simulada com sucesso pela interface gráfica do Hopsan.
+As tolerâncias dos ensaios não substituem validação contra componentes reais.
+
+SIMBOLOGIA E FONTES
+Ícones vetoriais próprios: quadrados de posição, ligações, setas, bloqueios,
+bobinas, molas e portas numeradas. A mesma imagem está disponível nos modos
+user e iso do Hopsan. A correspondência funcional foi conferida com as posições
+de válvulas apresentadas pela Festo. Trata-se de implementação baseada nessas
+convenções, sem declaração de conformidade integral ou certificação normativa.
+Referência normativa: ISO 1219-1:2012, com emenda 1:2016, e ISO 1219-2 para
+diagramas completos. A íntegra licenciada da norma não integra este pacote.
+https://committee.iso.org/standard/60184.html?browse=tc
+Festo, Valve terminals MPA-S, catálogo 2016/10, p. 18–19:
+https://ftp.festo.com/public/pneumatic/SOFTWARE_SERVICE/Documentation/2017/EN/TYP32_EN.PDF
+Hopsan: https://github.com/Hopsan/hopsan/releases/tag/v2.24.4
+Interface e convenções de fluxo: NodePneumatic, PneumaticOrifice e
+PneumaticVolume2 da biblioteca padrão do Hopsan. Nenhuma DLL oficial foi alterada.
+
+REVISÃO ACADÊMICA
+Os cálculos descritos foram executados localmente. Revisão crítica pelo aluno
+e docente continua necessária. A nota de autoria e metodologia está em
+AUTORIA.txt. Datas reais preservadas.
+
+
+AMPLIAÇÃO DA VERSÃO 0.4
+Atuadores: cilindros de dupla ação e simples ação com retorno por mola.
+Fluxo: estranguladora ajustável, retenção, reguladora unidirecional, bloqueio.
+Pressão: regulador com alívio, válvula de alívio e escape rápido.
+Lógica pneumática: seletora OU e duas pressões E.
+Armazenamento: reservatório com volume fixo e troca térmica opcional.
+Instrumentação: manômetro/pressostato e sensores de fim de curso.
+Comando: duas bobinas com indicação de conflito, TON e sequência didática.
+
+Os dez arquivos numerados de Circuitos são exemplos prontos. O primeiro tem
+uma válvula 5/3 centro fechado e um cilindro de dupla ação. Os quatro primeiros
+comparam centros e memória; os demais mostram retorno por mola, regulador,
+lógicas OU/E, escape rápido e retenção após perda da alimentação.
+As quatro comparações de cilindro, quatro reduções de passo e um ensaio de gás
+aprisionado passaram. Outros 40 ensaios de acessórios e comandos passaram;
+os seis novos circuitos também foram comparados com metade do passo.
+Registros: Circuitos/validacao_cilindro.json e validacao_acessorios.json.
+
+PORTAS DOS ACESSÓRIOS
+P para A: sentido restrito da reguladora unidirecional. A para P: A_retorno.
+Retenção: permite P para A acima do diferencial P_abertura; bloqueia retorno.
+Regulador/escape rápido: P alimentação, A trabalho, R exaustão.
+Alívio: P pressão protegida, A retorno/exaustão.
+Lógicas: X/Y entradas; A saída. OU seleciona a maior pressão; E a menor.
+Os dois modelos lógicos permitem descarga da saída pela entrada selecionada.
+Manômetro: P é porta de leitura; p_abs em Pa absolutos e p_bar manométrico.
+Pressostato: P_ligar em Pa manométricos; desliga em P_ligar menos Histerese.
+O comando de bobinas dá u zero quando ambas são acionadas. Na 5/2 biestável,
+isso mantém a posição anterior; não representa parada segura.
+
+MONTAGEM E PASSO
+Os acessórios são Q; fontes, volumes e novos cilindros são C. Entre duas
+válvulas Q em série, inserir um volume de linha, por exemplo PneumaticVolume2.
+O reservatório nativo tem uma porta de potência; não pressupor uma derivação
+Q-Q sem volume. Instrumentos de leitura podem observar um nó já conectado.
+Os novos cilindros e reservatório usam integração explícita e impedância nula.
+Começar com passo 0,00005 s e conferir a redução pela metade ao alterar o
+circuito. Volumes pequenos e áreas grandes podem exigir passos menores.
+
+PARÂMETROS E LIMITES DA AMPLIAÇÃO
+As câmaras do cilindro têm volume variável, gás ideal e trabalho p*dV; a massa,
+carga, mola e amortecimento mecânico pertencem ao componente. Não há porta
+mecânica externa. Batentes são inelásticos. Centro fechado aprisiona ar, mas
+não fixa rigidamente a posição: o pistão pode continuar a mover por inércia e
+compressibilidade. Uma câmara isolada pode ultrapassar a pressão de alimentação.
+O reservatório usa integração de massa/energia e UA opcional em W/K.
+O regulador tem banda proporcional Banda, padrão 10000 Pa, e ajuste relativo
+à exaustão, padrão 300000 Pa. A vazão sob carga pode reduzir a pressão regulada.
+O escape rápido usa diferencial de comutação de 500 Pa; isso deixa residual
+de aproximadamente 0,005 bar acima da atmosfera no exemplo. Retenção usa
+diferencial de abertura padrão 1000 Pa. Área de 2e-6 m² e Cd=0,65 são os padrões
+dos acessórios; A_retorno=8e-6 m² na reguladora unidirecional.
+
+Os símbolos auxiliares são desenhos funcionais próprios; não são certificados
+pela ISO 1219. FluidSIM é referência de praticidade, sem equivalência integral.
+Ainda não modelados: compressor com consumo energético, contaminação e filtros,
+secagem, tubulações com rede térmica, atrito e amortecimento comerciais,
+vazamentos/falhas parametrizados e comando elétrico de potência.
+Os exemplos e os testes reproduzíveis acompanham este repositório.

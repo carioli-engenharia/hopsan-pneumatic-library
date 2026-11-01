@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanobjectappearance version="0.3">
+  <modelobject typename="PD_CilindroSimplesAcao" displayname="Cilindro simples acao com mola" sourcecode="CilindroDuplaAcao.hpp">
+    <icons>
+      <icon path="PD_CilindroSimplesAcao.svg" type="user" scale="1" iconrotation="ON" />
+      <icon path="PD_CilindroSimplesAcao.svg" type="iso" scale="1" iconrotation="ON" />
+    </icons>
+    <ports>
+      <port name="A" x="0.5277777777777778" y="1" a="90" />
+    </ports>
+  </modelobject>
+</hopsanobjectappearance>

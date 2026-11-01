@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="310" height="130" viewBox="0 0 310 130">
+<title>5/3 centro em exaustao</title>
+<g fill="none" stroke="black" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+<rect x="35" y="25" width="80" height="80"/>
+<path d="M75,105 L99,25"/>
+<polyline points="94.4024,29.8849 99,25 100.149,31.609"/>
+<path d="M51,25 L51,105"/>
+<polyline points="54,99 51,105 48,99"/>
+<path d="M99,105 L99,95"/>
+<path d="M94,95 L104,95"/>
+<rect x="115" y="25" width="80" height="80"/>
+<path d="M179,25 L179,105"/>
+<polyline points="182,99 179,105 176,99"/>
+<path d="M131,25 L131,105"/>
+<polyline points="134,99 131,105 128,99"/>
+<path d="M155,105 L155,95"/>
+<path d="M150,95 L160,95"/>
+<rect x="195" y="25" width="80" height="80"/>
+<path d="M235,105 L211,25"/>
+<polyline points="209.851,31.609 211,25 215.598,29.8849"/>
+<path d="M259,25 L259,105"/>
+<polyline points="262,99 259,105 256,99"/>
+<path d="M211,105 L211,95"/>
+<path d="M206,95 L216,95"/>
+<rect x="0" y="68" width="24" height="18"/>
+<path d="M0,86 L24,68"/>
+<path d="M24,77 L35,77"/>
+<rect x="286" y="68" width="24" height="18"/>
+<path d="M286,86 L310,68"/>
+<path d="M275,77 L286,77"/>
+<path d="M3,43 l4,0 3,-7 5,14 5,-14 5,14 3,-7 5,0"/>
+<path d="M277,43 l4,0 3,-7 5,14 5,-14 5,14 3,-7 5,0"/>
+<path d="M155,130 L155,105"/>
+<path d="M131,0 L131,25"/>
+<path d="M179,0 L179,25"/>
+<path d="M131,130 L131,105"/>
+<path d="M179,130 L179,105"/>
+<path d="M0,100 L17,100"/>
+<path d="M17,100 L17,86"/>
+</g><g font-family="Arial,sans-serif" font-size="11" fill="black">
+<text x="159" y="123">1</text>
+<text x="135" y="19">4</text>
+<text x="183" y="19">2</text>
+<text x="135" y="123">5</text>
+<text x="183" y="123">3</text>
+<text x="2" y="118">u</text></g></svg>

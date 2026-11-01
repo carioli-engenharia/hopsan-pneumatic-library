@@ -1,0 +1,56 @@
+[
+  {
+    "circuito": "01_53_Centro_Fechado",
+    "aprovado": true,
+    "x_min_mm": 49.84174,
+    "x_max_mm": 90.39268,
+    "x_final_mm": 50.9755,
+    "diferenca_meio_passo_mm": 0.0176000000000065,
+    "residuo_energia_max_J": 1.378453e-12,
+    "pressao_A_max_bar_abs": 1.982051,
+    "pressao_B_max_bar_abs": 2.394311,
+    "variacao_massa_A_centro_kg": 0.0,
+    "variacao_massa_B_centro_kg": 0.0,
+    "x_inicio_centro_mm": 78.63668,
+    "x_fim_centro_mm": 89.52407
+  },
+  {
+    "circuito": "02_53_Centro_Exaustao",
+    "aprovado": true,
+    "x_min_mm": 50.0,
+    "x_max_mm": 100.0,
+    "x_final_mm": 52.38234,
+    "diferenca_meio_passo_mm": 0.02194000000001195,
+    "residuo_energia_max_J": 1.568721e-06,
+    "pressao_A_max_bar_abs": 1.652722,
+    "pressao_B_max_bar_abs": 1.9837129999999998
+  },
+  {
+    "circuito": "03_53_Centro_Pressurizado",
+    "aprovado": true,
+    "x_min_mm": 50.0,
+    "x_max_mm": 100.0,
+    "x_final_mm": 100.0,
+    "diferenca_meio_passo_mm": 0.006180000000001462,
+    "residuo_energia_max_J": 7.582162e-06,
+    "pressao_A_max_bar_abs": 6.0,
+    "pressao_B_max_bar_abs": 6.3269709999999995
+  },
+  {
+    "circuito": "04_52_Biestavel",
+    "aprovado": true,
+    "x_min_mm": 0.0,
+    "x_max_mm": 100.0,
+    "x_final_mm": 0.0,
+    "diferenca_meio_passo_mm": 0.009030000000007088,
+    "residuo_energia_max_J": 0.0004430133,
+    "pressao_A_max_bar_abs": 5.385096999999999,
+    "pressao_B_max_bar_abs": 5.497272
+  },
+  {
+    "circuito": "Teste adiabatico fechado",
+    "aprovado": true,
+    "variacao_relativa_pVgamma": 1.0921476313981027e-06,
+    "residuo_energia_max_J": 1.904605e-13
+  }
+]

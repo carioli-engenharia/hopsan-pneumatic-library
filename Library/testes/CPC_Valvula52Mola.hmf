@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanmodelfile hmfversion="0.4" hopsanguiversion="2.24.4" hopsancoreversion="2.24.4">
+  <requirements>
+    <componentlibrary>
+      <id>59c07d33-554f-49d3-a163-a928823d4380</id>
+      <name>HopsanDefaultComponentLibrary</name>
+    </componentlibrary>
+    <componentlibrary id="b8117cc0-64eb-414d-9b7a-555d8bc07fab">
+      <id>b8117cc0-64eb-414d-9b7a-555d8bc07fab</id>
+      <name>PneumaticaDidatica</name>
+    </componentlibrary>
+  </requirements>
+  <system typename="Subsystem" name="Teste_CPC_Valvula52Mola" subtypename="" cqstype="UndefinedCQSType">
+    <simulationtime start="0" stop="0.02" timestep="0.0001" inherit_timestep="true" />
+    <simulationlogsettings starttime="0" numsamples="8001" />
+    <parameters />
+    <aliases />
+    <hopsangui>
+      <pose x="0" y="0" a="0" flipped="false" />
+      <viewport x="600" y="350" zoom=".8" />
+      <names hidden="0" />
+      <graphics type="user" />
+      <info>
+        <author>Consulte AUTORIA.txt</author>
+        <description>Biblioteca didatica de subsistemas pneumaticos, v0.1, 01/11/2026. Base conceitual: materiais CET0906 e biblioteca padrao Hopsan. Camara de volume fixo; nao inclui trabalho p*dV nem atrito de vedacoes. Revisao pelo aluno e pelo docente necessaria.</description>
+      </info>
+    </hopsangui>
+    <objects>
+      <component typename="CPC_Valvula52Mola" name="Valvula" disabled="false">
+        <parameters>
+          <parameter name="u#Value" type="double" unit="" value="0" />
+        </parameters>
+        <hopsangui>
+          <pose x="400" y="300" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Fonte_P" disabled="false">
+        <parameters>
+          <parameter unit="Pa" value="600000" type="double" name="pinput#Value" />
+          <parameter unit="K" value="293" type="double" name="Tinput#Value" />
+        </parameters>
+        <ports>
+          <port nodetype="NodePneumatic" name="Pp1" />
+        </ports>
+        <hopsangui>
+          <pose x="100" y="50" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Fonte_A" disabled="false">
+        <parameters>
+          <parameter unit="Pa" value="300000" type="double" name="pinput#Value" />
+          <parameter unit="K" value="293" type="double" name="Tinput#Value" />
+        </parameters>
+        <ports>
+          <port nodetype="NodePneumatic" name="Pp1" />
+        </ports>
+        <hopsangui>
+          <pose x="280" y="50" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Fonte_R" disabled="false">
+        <parameters>
+          <parameter unit="Pa" value="100000" type="double" name="pinput#Value" />
+          <parameter unit="K" value="293" type="double" name="Tinput#Value" />
+        </parameters>
+        <ports>
+          <port nodetype="NodePneumatic" name="Pp1" />
+        </ports>
+        <hopsangui>
+          <pose x="460" y="50" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Fonte_B" disabled="false">
+        <parameters>
+          <parameter unit="Pa" value="300000" type="double" name="pinput#Value" />
+          <parameter unit="K" value="293" type="double" name="Tinput#Value" />
+        </parameters>
+        <ports>
+          <port nodetype="NodePneumatic" name="Pp1" />
+        </ports>
+        <hopsangui>
+          <pose x="640" y="50" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Fonte_S" disabled="false">
+        <parameters>
+          <parameter unit="Pa" value="100000" type="double" name="pinput#Value" />
+          <parameter unit="K" value="293" type="double" name="Tinput#Value" />
+        </parameters>
+        <ports>
+          <port nodetype="NodePneumatic" name="Pp1" />
+        </ports>
+        <hopsangui>
+          <pose x="820" y="50" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+    </objects>
+    <connections>
+      <connect startcomponent="Fonte_P" startport="Pp1" endcomponent="Valvula" endport="P">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="100" y="50" />
+            <coordinate x="400" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Fonte_A" startport="Pp1" endcomponent="Valvula" endport="A">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="280" y="50" />
+            <coordinate x="400" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Fonte_R" startport="Pp1" endcomponent="Valvula" endport="R">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="460" y="50" />
+            <coordinate x="400" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Fonte_B" startport="Pp1" endcomponent="Valvula" endport="B">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="640" y="50" />
+            <coordinate x="400" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Fonte_S" startport="Pp1" endcomponent="Valvula" endport="S">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="820" y="50" />
+            <coordinate x="400" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+    </connections>
+  </system>
+</hopsanmodelfile>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanobjectappearance version="0.3">
+  <modelobject typename="PD_ReguladoraUnidirecional" displayname="Reguladora de fluxo unidirecional" sourcecode="AcessoriosPneumaticos.hpp">
+    <icons>
+      <icon path="PD_ReguladoraUnidirecional.svg" type="user" scale="1" iconrotation="ON" />
+      <icon path="PD_ReguladoraUnidirecional.svg" type="iso" scale="1" iconrotation="ON" />
+    </icons>
+    <ports>
+      <port name="P" x="0" y="0.5" a="180" />
+      <port name="A" x="1" y="0.5" a="0" />
+    </ports>
+  </modelobject>
+</hopsanobjectappearance>

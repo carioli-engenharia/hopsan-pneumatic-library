@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanobjectappearance version="0.3">
+  <modelobject typename="PD_ReguladorPressao" displayname="Regulador de pressao com alivio" sourcecode="AcessoriosPneumaticos.hpp">
+    <icons>
+      <icon path="PD_ReguladorPressao.svg" type="user" scale="1" iconrotation="ON" />
+      <icon path="PD_ReguladorPressao.svg" type="iso" scale="1" iconrotation="ON" />
+    </icons>
+    <ports>
+      <port name="P" x="0" y="0.5" a="180" />
+      <port name="A" x="1" y="0.5" a="0" />
+      <port name="R" x="0.5" y="1" a="90" />
+    </ports>
+  </modelobject>
+</hopsanobjectappearance>

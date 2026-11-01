@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanmodelfile hmfversion="0.4" hopsanguiversion="2.24.4" hopsancoreversion="2.24.4">
+  <requirements>
+    <componentlibrary>
+      <id>59c07d33-554f-49d3-a163-a928823d4380</id>
+      <name>HopsanDefaultComponentLibrary</name>
+    </componentlibrary>
+    <componentlibrary id="b8117cc0-64eb-414d-9b7a-555d8bc07fab">
+      <id>b8117cc0-64eb-414d-9b7a-555d8bc07fab</id>
+      <name>PneumaticaDidatica</name>
+    </componentlibrary>
+  </requirements>
+  <system typename="Subsystem" name="10_Retencao_Armazenamento" subtypename="" cqstype="UndefinedCQSType">
+    <simulationtime start="0" stop="4" timestep=".00005" inherit_timestep="true" />
+    <simulationlogsettings starttime="0" numsamples="2001" />
+    <parameters />
+    <aliases />
+    <hopsangui>
+      <pose x="0" y="0" a="0" flipped="false" />
+      <viewport x="350" y="250" zoom=".9" />
+      <names hidden="0" />
+      <graphics type="user" />
+      <info>
+        <author>Consulte AUTORIA.txt</author>
+        <description>Exemplo didatico; parametros e limites no guia.</description>
+      </info>
+    </hopsangui>
+    <objects>
+      <component typename="PD_Retencao" name="Valvula" disabled="false">
+        <parameters>
+          <parameter name="A_passagem#Value" value="3e-06" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="300" y="300" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PD_Reservatorio" name="Reservatorio" disabled="false">
+        <parameters>
+          <parameter name="Volume#Value" value="0.0005" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="600" y="240" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Fonte_1" disabled="false">
+        <parameters>
+          <parameter name="pinput#Value" value="600000" type="double" unit="" />
+          <parameter name="Tinput#Value" value="293" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="70" y="300" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="SignalStep" name="Queda_Alimentacao" disabled="false">
+        <parameters>
+          <parameter name="y_0#Value" value="600000" type="double" unit="" />
+          <parameter name="y_A#Value" value="-500000" type="double" unit="" />
+          <parameter name="t_step#Value" value="1.5" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="70" y="130" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PD_ManometroPressostato" name="Manometro" disabled="false">
+        <parameters />
+        <hopsangui>
+          <pose x="600" y="420" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+    </objects>
+    <connections>
+      <connect startcomponent="Valvula" startport="A" endcomponent="Reservatorio" endport="P">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="390" y="300" />
+            <coordinate x="600" y="300" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="horizontal" />
+          </geometries>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Fonte_1" startport="Pp1" endcomponent="Valvula" endport="P">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="70" y="300" />
+            <coordinate x="170" y="300" />
+            <coordinate x="170" y="300" />
+            <coordinate x="210" y="300" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="horizontal" />
+            <geometry geometry="horizontal" />
+            <geometry geometry="horizontal" />
+          </geometries>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Queda_Alimentacao" startport="out" endcomponent="Fonte_1" endport="pinput">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="120" y="130" />
+            <coordinate x="160" y="130" />
+            <coordinate x="160" y="250" />
+            <coordinate x="70" y="250" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="horizontal" />
+            <geometry geometry="vertical" />
+            <geometry geometry="horizontal" />
+          </geometries>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Manometro" startport="P" endcomponent="Valvula" endport="A">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="600" y="480" />
+            <coordinate x="720" y="480" />
+            <coordinate x="720" y="300" />
+            <coordinate x="390" y="300" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="horizontal" />
+            <geometry geometry="vertical" />
+            <geometry geometry="horizontal" />
+          </geometries>
+        </hopsangui>
+      </connect>
+    </connections>
+  </system>
+</hopsanmodelfile>

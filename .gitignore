@@ -1,0 +1,14 @@
+*.csv
+*.log
+__pycache__/
+Library/testes/*_u*.hmf
+Library/testes_acessorios/
+Library/*_ensaio.png
+Library/Circuitos/*.png
+Library/Circuitos/*meio_passo*
+Library/testes/*.png
+build/
+
+Library/validacao_*.json
+Library/Circuitos/validacao_*.json
+Library/Circuitos/Teste_Adiabatico.hmf

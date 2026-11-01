@@ -1,0 +1,11 @@
+Pneumatica Didatica
+Independent educational extension for Hopsan.
+
+Uses the Hopsan component API and NodePneumatic conventions.
+Hopsan is developed by the Hopsan Group at Linkoping University.
+Hopsan is not affiliated with or responsible for this extension.
+
+The valve symbols were drawn for this project using conventional fluid-power
+notation. References: ISO 1219-1 and Festo MPA-S public technical catalogue.
+No ISO publication or Festo artwork is distributed here.
+No claim of full standards compliance or FluidSIM equivalence is made.

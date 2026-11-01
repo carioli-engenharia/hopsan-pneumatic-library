@@ -1,0 +1,706 @@
+[
+  {
+    "tipo": "CPC_Valvula32NF",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": -0.00368358,
+      "R": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NF",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": -0.00368358,
+      "R": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NF",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": false,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": 0.00736716,
+      "R": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NF",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.008681304,
+      "R": -0.008681304
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NF",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.008681304,
+      "R": -0.008681304
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NF",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": true,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716,
+      "R": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NF",
+    "ensaio": "dinamico",
+    "pressao_A_final_Pa": 100000.0,
+    "pressao_B_final_Pa": null,
+    "residuo_max_Pa": 9.832441e-05,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NF",
+    "ensaio": "meio_passo",
+    "desvio_max_pressao_Pa": 262.29999999993015,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NA",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": 0.00736716,
+      "R": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NA",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": 0.00736716,
+      "R": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NA",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": false,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": -0.00368358,
+      "R": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NA",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716,
+      "R": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NA",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716,
+      "R": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NA",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": true,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.008681304,
+      "R": -0.008681304
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NA",
+    "ensaio": "dinamico",
+    "pressao_A_final_Pa": 600000.0,
+    "pressao_B_final_Pa": null,
+    "residuo_max_Pa": 9.832441e-05,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula32NA",
+    "ensaio": "meio_passo",
+    "desvio_max_pressao_Pa": 258.0,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Mola",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": -0.00368358,
+      "R": 0.00368358,
+      "B": 0.00736716,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Mola",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": -0.00368358,
+      "R": 0.00368358,
+      "B": 0.00736716,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Mola",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": false,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": 0.00736716,
+      "R": 0.0,
+      "B": -0.00368358,
+      "S": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Mola",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00675323,
+      "A": 0.008681304,
+      "R": -0.008681304,
+      "B": -0.00675323,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Mola",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00675323,
+      "A": 0.008681304,
+      "R": -0.008681304,
+      "B": -0.00675323,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Mola",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": true,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716,
+      "R": 0.0,
+      "B": 0.008302916,
+      "S": -0.008302916
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Mola",
+    "ensaio": "dinamico",
+    "pressao_A_final_Pa": 100000.0,
+    "pressao_B_final_Pa": 600000.0,
+    "residuo_max_Pa": 9.832441e-05,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Mola",
+    "ensaio": "meio_passo",
+    "desvio_max_pressao_Pa": 262.29999999993015,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Fechada",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": -0.00368358,
+      "R": 0.00368358,
+      "B": 0.00736716,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Fechada",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": false,
+    "estado": 0,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.0,
+      "R": 0.0,
+      "B": 0.0,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Fechada",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": false,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": 0.00736716,
+      "R": 0.0,
+      "B": -0.00368358,
+      "S": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Fechada",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00675323,
+      "A": 0.008681304,
+      "R": -0.008681304,
+      "B": -0.00675323,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Fechada",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": true,
+    "estado": 0,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.0,
+      "R": 0.0,
+      "B": 0.0,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Fechada",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": true,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716,
+      "R": 0.0,
+      "B": 0.008302916,
+      "S": -0.008302916
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Fechada",
+    "ensaio": "dinamico",
+    "pressao_A_final_Pa": 100000.0,
+    "pressao_B_final_Pa": 600000.0,
+    "residuo_max_Pa": 9.832441e-05,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Fechada",
+    "ensaio": "meio_passo",
+    "desvio_max_pressao_Pa": 262.29999999993015,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Exaustao",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": -0.00368358,
+      "R": 0.00368358,
+      "B": 0.00736716,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Exaustao",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": false,
+    "estado": 0,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": -0.00368358,
+      "R": 0.00368358,
+      "B": -0.00368358,
+      "S": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Exaustao",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": false,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": 0.00736716,
+      "R": 0.0,
+      "B": -0.00368358,
+      "S": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Exaustao",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00675323,
+      "A": 0.008681304,
+      "R": -0.008681304,
+      "B": -0.00675323,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Exaustao",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": true,
+    "estado": 0,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.008681304,
+      "R": -0.008681304,
+      "B": 0.008302916,
+      "S": -0.008302916
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Exaustao",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": true,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716,
+      "R": 0.0,
+      "B": 0.008302916,
+      "S": -0.008302916
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Exaustao",
+    "ensaio": "dinamico",
+    "pressao_A_final_Pa": 100000.0,
+    "pressao_B_final_Pa": 100000.0,
+    "residuo_max_Pa": 9.832441e-05,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Exaustao",
+    "ensaio": "meio_passo",
+    "desvio_max_pressao_Pa": 262.29999999993015,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Pressao",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": -0.00368358,
+      "R": 0.00368358,
+      "B": 0.00736716,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Pressao",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": false,
+    "estado": 0,
+    "vazoes_kg_s": {
+      "P": -0.01473432,
+      "A": 0.00736716,
+      "R": 0.0,
+      "B": 0.00736716,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Pressao",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": false,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": 0.00736716,
+      "R": 0.0,
+      "B": -0.00368358,
+      "S": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Pressao",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00675323,
+      "A": 0.008681304,
+      "R": -0.008681304,
+      "B": -0.00675323,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Pressao",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": true,
+    "estado": 0,
+    "vazoes_kg_s": {
+      "P": 0.01412039,
+      "A": -0.00736716,
+      "R": 0.0,
+      "B": -0.00675323,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Pressao",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": true,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716,
+      "R": 0.0,
+      "B": 0.008302916,
+      "S": -0.008302916
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Pressao",
+    "ensaio": "dinamico",
+    "pressao_A_final_Pa": 600000.0,
+    "pressao_B_final_Pa": 600000.0,
+    "residuo_max_Pa": 9.86352e-05,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula53Pressao",
+    "ensaio": "meio_passo",
+    "desvio_max_pressao_Pa": 262.29999999993015,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Memoria",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": -0.00368358,
+      "R": 0.00368358,
+      "B": 0.00736716,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Memoria",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": false,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": -0.00368358,
+      "R": 0.00368358,
+      "B": 0.00736716,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Memoria",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": false,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": -0.00736716,
+      "A": 0.00736716,
+      "R": 0.0,
+      "B": -0.00368358,
+      "S": 0.00368358
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Memoria",
+    "ensaio": "estatico",
+    "u": -1,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00675323,
+      "A": 0.008681304,
+      "R": -0.008681304,
+      "B": -0.00675323,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Memoria",
+    "ensaio": "estatico",
+    "u": 0,
+    "reverso": true,
+    "estado": -1,
+    "vazoes_kg_s": {
+      "P": 0.00675323,
+      "A": 0.008681304,
+      "R": -0.008681304,
+      "B": -0.00675323,
+      "S": 0.0
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Memoria",
+    "ensaio": "estatico",
+    "u": 1,
+    "reverso": true,
+    "estado": 1,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716,
+      "R": 0.0,
+      "B": 0.008302916,
+      "S": -0.008302916
+    },
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Memoria",
+    "ensaio": "dinamico",
+    "pressao_A_final_Pa": 100000.0,
+    "pressao_B_final_Pa": 600000.0,
+    "residuo_max_Pa": 9.832441e-05,
+    "aprovado": true
+  },
+  {
+    "tipo": "CPC_Valvula52Memoria",
+    "ensaio": "meio_passo",
+    "desvio_max_pressao_Pa": 262.29999999993015,
+    "aprovado": true
+  }
+]

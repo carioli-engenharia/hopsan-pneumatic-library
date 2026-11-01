@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsancomponentlibrary version="0.2">
+  <id>b8117cc0-64eb-414d-9b7a-555d8bc07fab</id>
+  <name>PneumaticaDidatica</name>
+  <lib debug_ext="_d">pneumaticadidatica_v04</lib>
+  <source>ValvulasPneumaticas.cpp</source>
+  <component>ValvulasPneumaticas.hpp</component>
+  <componentxml>CPC_Valvula32NF.xml</componentxml>
+  <componentxml>CPC_Valvula32NA.xml</componentxml>
+  <componentxml>CPC_Valvula52Mola.xml</componentxml>
+  <componentxml>CPC_Valvula53Fechada.xml</componentxml>
+  <componentxml>CPC_Valvula53Exaustao.xml</componentxml>
+  <componentxml>CPC_Valvula53Pressao.xml</componentxml>
+  <componentxml>CPC_Valvula52Memoria.xml</componentxml>
+  <component>CilindroDuplaAcao.hpp</component>
+  <componentxml>CilindroDuplaAcao.xml</componentxml>
+  <component>SequenciaDidatica.hpp</component>
+  <componentxml>SequenciaDidatica.xml</componentxml>
+  <component>AcessoriosPneumaticos.hpp</component>
+  <component>InstrumentosPneumaticos.hpp</component>
+  <componentxml>PD_Estranguladora.xml</componentxml>
+  <componentxml>PD_Retencao.xml</componentxml>
+  <componentxml>PD_ReguladoraUnidirecional.xml</componentxml>
+  <componentxml>PD_SeletoraOU.xml</componentxml>
+  <componentxml>PD_DuasPressoesE.xml</componentxml>
+  <componentxml>PD_EscapeRapido.xml</componentxml>
+  <componentxml>PD_ReguladorPressao.xml</componentxml>
+  <componentxml>PD_Alivio.xml</componentxml>
+  <componentxml>PD_Bloqueio.xml</componentxml>
+  <componentxml>PD_ManometroPressostato.xml</componentxml>
+  <componentxml>PD_Reservatorio.xml</componentxml>
+  <componentxml>PD_FinsCurso.xml</componentxml>
+  <componentxml>PD_ComandoBobinas.xml</componentxml>
+  <componentxml>PD_TemporizadorTON.xml</componentxml>
+  <componentxml>PD_CilindroSimplesAcao.xml</componentxml>
+</hopsancomponentlibrary>

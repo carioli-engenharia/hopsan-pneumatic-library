@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanmodelfile hmfversion="0.4" hopsanguiversion="2.24.4" hopsancoreversion="2.24.4">
+  <requirements>
+    <componentlibrary>
+      <id>59c07d33-554f-49d3-a163-a928823d4380</id>
+      <name>HopsanDefaultComponentLibrary</name>
+    </componentlibrary>
+    <componentlibrary id="b8117cc0-64eb-414d-9b7a-555d8bc07fab">
+      <id>b8117cc0-64eb-414d-9b7a-555d8bc07fab</id>
+      <name>PneumaticaDidatica</name>
+    </componentlibrary>
+  </requirements>
+  <system typename="Subsystem" name="Exemplo_CPC_Valvula32NF" subtypename="" cqstype="UndefinedCQSType">
+    <simulationtime start="0" stop="8" timestep="0.0001" inherit_timestep="true" />
+    <simulationlogsettings starttime="0" numsamples="8001" />
+    <parameters />
+    <aliases />
+    <hopsangui>
+      <pose x="0" y="0" a="0" flipped="false" />
+      <viewport x="600" y="350" zoom=".8" />
+      <names hidden="0" />
+      <graphics type="user" />
+      <info>
+        <author>Consulte AUTORIA.txt</author>
+        <description>Biblioteca didatica de subsistemas pneumaticos, v0.1, 01/11/2026. Base conceitual: materiais CET0906 e biblioteca padrao Hopsan. Camara de volume fixo; nao inclui trabalho p*dV nem atrito de vedacoes. Revisao pelo aluno e pelo docente necessaria.</description>
+      </info>
+    </hopsangui>
+    <objects>
+      <component typename="CPC_Valvula32NF" name="Valvula" disabled="false">
+        <parameters>
+          <parameter name="u#Value" type="double" unit="" value="0" />
+        </parameters>
+        <hopsangui>
+          <pose x="400" y="300" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Fonte_P" disabled="false">
+        <parameters>
+          <parameter unit="Pa" value="600000" type="double" name="pinput#Value" />
+          <parameter unit="K" value="293" type="double" name="Tinput#Value" />
+        </parameters>
+        <ports>
+          <port nodetype="NodePneumatic" name="Pp1" />
+        </ports>
+        <hopsangui>
+          <pose x="200" y="600" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Fonte_R" disabled="false">
+        <parameters>
+          <parameter unit="Pa" value="100000" type="double" name="pinput#Value" />
+          <parameter unit="K" value="293" type="double" name="Tinput#Value" />
+        </parameters>
+        <ports>
+          <port nodetype="NodePneumatic" name="Pp1" />
+        </ports>
+        <hopsangui>
+          <pose x="420" y="600" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticVolume2" name="Camara_A" disabled="false">
+        <parameters>
+          <parameter unit="m3" value="0.0004" type="double" name="V#Value" />
+          <parameter unit="K" value="293" type="double" name="T0#Value" />
+          <parameter name="Pp1#Pressure" type="double" unit="" value="100000" />
+          <parameter name="Pp2#Pressure" type="double" unit="" value="100000" />
+          <parameter name="Pp1#Temperature" type="double" unit="" value="293" />
+          <parameter name="Pp2#Temperature" type="double" unit="" value="293" />
+          <parameter name="Pp1#WaveVariable" type="double" unit="" value="100000" />
+          <parameter name="Pp2#WaveVariable" type="double" unit="" value="100000" />
+        </parameters>
+        <ports>
+          <port nodetype="NodePneumatic" name="Pp1" />
+          <port nodetype="NodePneumatic" name="Pp2" />
+        </ports>
+        <hopsangui>
+          <pose x="350" y="70" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticQsrc" name="Tampa_A" disabled="false">
+        <parameters>
+          <parameter name="qminput#Value" type="double" unit="" value="0" />
+          <parameter name="Tinput#Value" type="double" unit="" value="293" />
+        </parameters>
+        <hopsangui>
+          <pose x="350" y="-100" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="SignalStep" name="Comando_1" disabled="false" locked="false" subtypename="" cqstype="S">
+        <parameters>
+          <parameter name="y_0#Value" type="double" value="0" internal="false" unit="" />
+          <parameter name="y_A#Value" type="double" value="1" internal="false" unit="" />
+          <parameter name="t_step#Value" type="double" value="0.5" internal="false" unit="s" />
+        </parameters>
+        <ports>
+          <port name="out" porttype="WritePortType" nodetype="NodeSignal" />
+          <port name="y_0" nodetype="NodeSignal" />
+          <port name="y_A" nodetype="NodeSignal" />
+          <port name="t_step" nodetype="NodeSignal" />
+        </ports>
+        <hopsangui>
+          <pose x="-300" y="200" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="SignalStep" name="Comando_2" disabled="false" locked="false" subtypename="" cqstype="S">
+        <parameters>
+          <parameter name="y_0#Value" type="double" value="0" internal="false" unit="" />
+          <parameter name="y_A#Value" type="double" value="-2" internal="false" unit="" />
+          <parameter name="t_step#Value" type="double" value="2" internal="false" unit="s" />
+        </parameters>
+        <ports>
+          <port name="out" porttype="WritePortType" nodetype="NodeSignal" />
+          <port name="y_0" nodetype="NodeSignal" />
+          <port name="y_A" nodetype="NodeSignal" />
+          <port name="t_step" nodetype="NodeSignal" />
+        </ports>
+        <hopsangui>
+          <pose x="-300" y="350" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="SignalStep" name="Comando_3" disabled="false" locked="false" subtypename="" cqstype="S">
+        <parameters>
+          <parameter name="y_0#Value" type="double" value="0" internal="false" unit="" />
+          <parameter name="y_A#Value" type="double" value="1" internal="false" unit="" />
+          <parameter name="t_step#Value" type="double" value="3.5" internal="false" unit="s" />
+        </parameters>
+        <ports>
+          <port name="out" porttype="WritePortType" nodetype="NodeSignal" />
+          <port name="y_0" nodetype="NodeSignal" />
+          <port name="y_A" nodetype="NodeSignal" />
+          <port name="t_step" nodetype="NodeSignal" />
+        </ports>
+        <hopsangui>
+          <pose x="-300" y="500" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="SignalAdd" disabled="false" name="Somar_1" subtypename="" cqstype="S" locked="false">
+        <parameters>
+          <parameter value="0" name="in1#Value" internal="false" type="double" unit="" />
+          <parameter value="0" name="in2#Value" internal="false" type="double" unit="" />
+        </parameters>
+        <ports>
+          <port name="in1" nodetype="NodeSignal" porttype="ReadPortType" />
+          <port name="in2" nodetype="NodeSignal" porttype="ReadPortType" />
+          <port name="out" nodetype="NodeSignal" porttype="WritePortType" />
+        </ports>
+        <hopsangui>
+          <pose x="-100" y="250" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="SignalAdd" disabled="false" name="Somar_2" subtypename="" cqstype="S" locked="false">
+        <parameters>
+          <parameter value="0" name="in1#Value" internal="false" type="double" unit="" />
+          <parameter value="0" name="in2#Value" internal="false" type="double" unit="" />
+        </parameters>
+        <ports>
+          <port name="in1" nodetype="NodeSignal" porttype="ReadPortType" />
+          <port name="in2" nodetype="NodeSignal" porttype="ReadPortType" />
+          <port name="out" nodetype="NodeSignal" porttype="WritePortType" />
+        </ports>
+        <hopsangui>
+          <pose x="100" y="300" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+    </objects>
+    <connections>
+      <connect startcomponent="Fonte_P" startport="Pp1" endcomponent="Valvula" endport="P">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="200" y="600" />
+            <coordinate x="400" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Fonte_R" startport="Pp1" endcomponent="Valvula" endport="R">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="420" y="600" />
+            <coordinate x="400" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Valvula" startport="A" endcomponent="Camara_A" endport="Pp1">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="400" y="300" />
+            <coordinate x="350" y="70" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Camara_A" startport="Pp2" endcomponent="Tampa_A" endport="Pp1">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="350" y="70" />
+            <coordinate x="350" y="-100" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Comando_1" startport="out" endcomponent="Somar_1" endport="in1">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="-300" y="200" />
+            <coordinate x="-100" y="250" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Comando_2" startport="out" endcomponent="Somar_1" endport="in2">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="-300" y="350" />
+            <coordinate x="-100" y="250" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Somar_1" startport="out" endcomponent="Somar_2" endport="in1">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="-100" y="250" />
+            <coordinate x="100" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Comando_3" startport="out" endcomponent="Somar_2" endport="in2">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="-300" y="500" />
+            <coordinate x="100" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Somar_2" startport="out" endcomponent="Valvula" endport="u">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="100" y="300" />
+            <coordinate x="400" y="300" />
+          </coordinates>
+        </hopsangui>
+      </connect>
+    </connections>
+  </system>
+</hopsanmodelfile>

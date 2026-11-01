@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanobjectappearance version="0.3">
+  <modelobject typename="CPC_Valvula32NF" displayname="3/2 normalmente fechada" sourcecode="ValvulasPneumaticas.hpp">
+    <icons>
+      <icon path="CPC_Valvula32NF.svg" type="user" scale="1" iconrotation="ON" />
+      <icon path="CPC_Valvula32NF.svg" type="iso" scale="1" iconrotation="ON" />
+    </icons>
+    <ports>
+      <port name="P" x="0.5869565217391305" y="1.0" a="90" />
+      <port name="A" x="0.6739130434782609" y="0.0" a="270" />
+      <port name="R" x="0.7608695652173914" y="1.0" a="90" />
+      <port name="u" x="0" y="0.7692307692307693" a="180" />
+    </ports>
+  </modelobject>
+</hopsanobjectappearance>

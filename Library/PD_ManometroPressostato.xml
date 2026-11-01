@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanobjectappearance version="0.3">
+  <modelobject typename="PD_ManometroPressostato" displayname="Manometro e pressostato" sourcecode="InstrumentosPneumaticos.hpp">
+    <icons>
+      <icon path="PD_ManometroPressostato.svg" type="user" scale="1" iconrotation="ON" />
+      <icon path="PD_ManometroPressostato.svg" type="iso" scale="1" iconrotation="ON" />
+    </icons>
+    <ports>
+      <port name="P" x="0.5" y="1" a="90" />
+    </ports>
+  </modelobject>
+</hopsanobjectappearance>

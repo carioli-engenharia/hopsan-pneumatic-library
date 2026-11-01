@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanobjectappearance version="0.3">
+  <modelobject typename="PD_FinsCurso" displayname="Sensores de fim de curso" sourcecode="InstrumentosPneumaticos.hpp">
+    <icons>
+      <icon path="PD_FinsCurso.svg" type="user" scale="1" iconrotation="ON" />
+      <icon path="PD_FinsCurso.svg" type="iso" scale="1" iconrotation="ON" />
+    </icons>
+    <ports>
+      <port name="x" x="0" y="0.5" a="180" />
+      <port name="recuado" x="1" y="0.33" a="0" />
+      <port name="avancado" x="1" y="0.67" a="0" />
+    </ports>
+  </modelobject>
+</hopsanobjectappearance>

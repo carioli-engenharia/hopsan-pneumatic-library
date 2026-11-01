@@ -1,0 +1,263 @@
+[
+  {
+    "ensaio": "Estranguladora_aberta",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": -0.00184179,
+      "A": 0.00184179
+    }
+  },
+  {
+    "ensaio": "Estranguladora_fechada",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.0
+    }
+  },
+  {
+    "ensaio": "Estranguladora_reversa",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.00184179,
+      "A": -0.00184179
+    }
+  },
+  {
+    "ensaio": "Retencao_direta",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": -0.00183872,
+      "A": 0.00183872
+    }
+  },
+  {
+    "ensaio": "Retencao_reversa",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.0
+    }
+  },
+  {
+    "ensaio": "Retencao_abaixo_abertura",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.0
+    }
+  },
+  {
+    "ensaio": "Unidirecional_direta",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": -0.00184179,
+      "A": 0.00184179
+    }
+  },
+  {
+    "ensaio": "Unidirecional_reversa",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.00736716,
+      "A": -0.00736716
+    }
+  },
+  {
+    "ensaio": "Escape_alimenta",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": -0.00184179,
+      "A": 0.00184179,
+      "R": 0.0
+    }
+  },
+  {
+    "ensaio": "Escape_descarrega",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": -0.00184179,
+      "R": 0.00184179
+    }
+  },
+  {
+    "ensaio": "Regulador_alimenta",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": -0.00184179,
+      "A": 0.00184179,
+      "R": 0.0
+    }
+  },
+  {
+    "ensaio": "Regulador_alivia",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": -0.001534825,
+      "R": 0.001534825
+    }
+  },
+  {
+    "ensaio": "Regulador_equilibrio",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.0,
+      "R": 0.0
+    }
+  },
+  {
+    "ensaio": "Alivio_aberto",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": -0.00184179,
+      "A": 0.00184179
+    }
+  },
+  {
+    "ensaio": "Alivio_fechado",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.0
+    }
+  },
+  {
+    "ensaio": "Bloqueio_aberto",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": -0.00184179,
+      "A": 0.00184179
+    }
+  },
+  {
+    "ensaio": "Bloqueio_fechado",
+    "aprovado": true,
+    "vazoes_kg_s": {
+      "P": 0.0,
+      "A": 0.0
+    }
+  },
+  {
+    "ensaio": "Razao de areas da reguladora unidirecional",
+    "razao_vazao": 4.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Logica_OU_00",
+    "pressao_final_Pa": 100000.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Logica_OU_01",
+    "pressao_final_Pa": 600000.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Logica_OU_10",
+    "pressao_final_Pa": 600000.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Logica_OU_11",
+    "pressao_final_Pa": 600000.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Logica_E_00",
+    "pressao_final_Pa": 100000.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Logica_E_01",
+    "pressao_final_Pa": 100000.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Logica_E_10",
+    "pressao_final_Pa": 100000.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Logica_E_11",
+    "pressao_final_Pa": 600000.0,
+    "aprovado": true
+  },
+  {
+    "ensaio": "Bobinas_00",
+    "aprovado": true
+  },
+  {
+    "ensaio": "Bobinas_10",
+    "aprovado": true
+  },
+  {
+    "ensaio": "Bobinas_01",
+    "aprovado": true
+  },
+  {
+    "ensaio": "Bobinas_11",
+    "aprovado": true
+  },
+  {
+    "ensaio": "FimCurso_0",
+    "aprovado": true
+  },
+  {
+    "ensaio": "FimCurso_0.05",
+    "aprovado": true
+  },
+  {
+    "ensaio": "FimCurso_0.1",
+    "aprovado": true
+  },
+  {
+    "ensaio": "TON atraso e reset",
+    "ligou_s": 0.50025,
+    "aprovado": true
+  },
+  {
+    "ensaio": "05_32_Cilindro_Simples_Acao",
+    "aprovado": true,
+    "curso_max_mm": 100.0,
+    "posicao_final_mm": 0.0,
+    "desvio_meio_passo_mm": 0.0026100000000006673
+  },
+  {
+    "ensaio": "06_Regulador_Reservatorio",
+    "aprovado": true,
+    "pressao_final_bar_abs": 4.0,
+    "desvio_meio_passo_bar": 0.00016300000000057935,
+    "pressostato_final": 1.0
+  },
+  {
+    "ensaio": "07_Logica_OU",
+    "aprovado": true,
+    "pressao_final_bar_abs": 6.0,
+    "desvio_meio_passo_bar": 0.00016300000000057935,
+    "pressostato_final": 1.0
+  },
+  {
+    "ensaio": "08_Logica_E",
+    "aprovado": true,
+    "pressao_final_bar_abs": 4.5,
+    "desvio_meio_passo_bar": 0.00012200000000017752,
+    "pressostato_final": 1.0
+  },
+  {
+    "ensaio": "09_Escape_Rapido",
+    "aprovado": true,
+    "pressao_final_bar_abs": 1.004994,
+    "desvio_meio_passo_bar": 0.00018600000000024153,
+    "pressostato_final": 0.0
+  },
+  {
+    "ensaio": "10_Retencao_Armazenamento",
+    "aprovado": true,
+    "pressao_final_bar_abs": 5.99,
+    "desvio_meio_passo_bar": 0.00016300000000057935,
+    "pressostato_final": 1.0
+  }
+]

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanobjectappearance version="0.3">
+  <modelobject typename="PD_SequenciaDidatica" displayname="Sequencia de demonstracao" sourcecode="SequenciaDidatica.hpp">
+    <icons>
+      <icon path="SequenciaDidatica.svg" type="user" scale="1" iconrotation="ON" />
+    </icons>
+    <ports>
+      <port name="u" x="1" y=".5" a="0" />
+    </ports>
+  </modelobject>
+</hopsanobjectappearance>

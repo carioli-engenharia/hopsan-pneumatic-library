@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanmodelfile hmfversion="0.4" hopsanguiversion="2.24.4" hopsancoreversion="2.24.4">
+  <requirements>
+    <componentlibrary>
+      <id>59c07d33-554f-49d3-a163-a928823d4380</id>
+      <name>HopsanDefaultComponentLibrary</name>
+    </componentlibrary>
+    <componentlibrary id="b8117cc0-64eb-414d-9b7a-555d8bc07fab">
+      <id>b8117cc0-64eb-414d-9b7a-555d8bc07fab</id>
+      <name>PneumaticaDidatica</name>
+    </componentlibrary>
+  </requirements>
+  <system typename="Subsystem" name="04_52_Biestavel" subtypename="" cqstype="UndefinedCQSType">
+    <simulationtime start="0" stop="2" timestep="0.00005" inherit_timestep="true" />
+    <simulationlogsettings starttime="0" numsamples="2001" />
+    <parameters />
+    <aliases />
+    <hopsangui>
+      <pose x="0" y="0" a="0" flipped="false" />
+      <viewport x="340" y="280" zoom="0.7" />
+      <names hidden="0" />
+      <graphics type="user" />
+      <info>
+        <author>Consulte AUTORIA.txt</author>
+        <description>Cilindro pneumatico de dupla acao, duas camaras adiabaticas com volume variavel e trabalho p*dV. Carga mecanica integrada. Ver guia e validacao.</description>
+      </info>
+    </hopsangui>
+    <objects>
+      <component typename="CPC_Valvula52Memoria" name="Valvula_1" disabled="false">
+        <parameters>
+          <parameter name="u#Value" value="0" type="double" unit="" />
+          <parameter name="A_passagem#Value" value="1e-06" type="double" unit="" />
+          <parameter name="Cd#Value" value="0.65" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="400" y="370" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PD_CilindroDuplaAcao" name="Cilindro_1" disabled="false">
+        <parameters>
+          <parameter name="x_inicial#Value" value="0.05" type="double" unit="" />
+          <parameter name="B_viscoso#Value" value="120" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="400" y="100" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Alimentacao_6_bar_abs" disabled="false">
+        <parameters>
+          <parameter name="pinput#Value" value="600000" type="double" unit="" />
+          <parameter name="Tinput#Value" value="293" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="400" y="620" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Escape_R" disabled="false">
+        <parameters>
+          <parameter name="pinput#Value" value="100000" type="double" unit="" />
+          <parameter name="Tinput#Value" value="293" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="620" y="530" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PneumaticPTsrc" name="Escape_S" disabled="false">
+        <parameters>
+          <parameter name="pinput#Value" value="100000" type="double" unit="" />
+          <parameter name="Tinput#Value" value="293" type="double" unit="" />
+        </parameters>
+        <hopsangui>
+          <pose x="180" y="530" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+      <component typename="PD_SequenciaDidatica" name="Comando" disabled="false">
+        <parameters />
+        <hopsangui>
+          <pose x="50" y="370" a="0" flipped="false" />
+          <nametext position="0" nametextvisible="1" />
+        </hopsangui>
+      </component>
+    </objects>
+    <connections>
+      <connect startcomponent="Valvula_1" startport="A" endcomponent="Cilindro_1" endport="A">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="424" y="305" />
+            <coordinate x="424" y="240" />
+            <coordinate x="475" y="240" />
+            <coordinate x="475" y="155" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="vertical" />
+            <geometry geometry="horizontal" />
+            <geometry geometry="vertical" />
+          </geometries>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Valvula_1" startport="B" endcomponent="Cilindro_1" endport="B">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="376" y="305" />
+            <coordinate x="376" y="240" />
+            <coordinate x="325" y="240" />
+            <coordinate x="325" y="155" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="vertical" />
+            <geometry geometry="horizontal" />
+            <geometry geometry="vertical" />
+          </geometries>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Alimentacao_6_bar_abs" startport="Pp1" endcomponent="Valvula_1" endport="P">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="400" y="620" />
+            <coordinate x="400" y="435" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="vertical" />
+          </geometries>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Escape_R" startport="Pp1" endcomponent="Valvula_1" endport="R">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="620" y="530" />
+            <coordinate x="620" y="480" />
+            <coordinate x="424" y="480" />
+            <coordinate x="424" y="435" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="vertical" />
+            <geometry geometry="horizontal" />
+            <geometry geometry="vertical" />
+          </geometries>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Escape_S" startport="Pp1" endcomponent="Valvula_1" endport="S">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="180" y="530" />
+            <coordinate x="180" y="480" />
+            <coordinate x="376" y="480" />
+            <coordinate x="376" y="435" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="vertical" />
+            <geometry geometry="horizontal" />
+            <geometry geometry="vertical" />
+          </geometries>
+        </hopsangui>
+      </connect>
+      <connect startcomponent="Comando" startport="u" endcomponent="Valvula_1" endport="u">
+        <hopsangui>
+          <coordinates>
+            <coordinate x="100" y="370" />
+            <coordinate x="200" y="370" />
+            <coordinate x="200" y="405" />
+            <coordinate x="245" y="405" />
+          </coordinates>
+          <geometries>
+            <geometry geometry="horizontal" />
+            <geometry geometry="vertical" />
+            <geometry geometry="horizontal" />
+          </geometries>
+        </hopsangui>
+      </connect>
+    </connections>
+  </system>
+</hopsanmodelfile>

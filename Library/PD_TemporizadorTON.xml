@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hopsanobjectappearance version="0.3">
+  <modelobject typename="PD_TemporizadorTON" displayname="Temporizador de retardo TON" sourcecode="InstrumentosPneumaticos.hpp">
+    <icons>
+      <icon path="PD_TemporizadorTON.svg" type="user" scale="1" iconrotation="ON" />
+      <icon path="PD_TemporizadorTON.svg" type="iso" scale="1" iconrotation="ON" />
+    </icons>
+    <ports>
+      <port name="in" x="0" y="0.5" a="180" />
+      <port name="out" x="1" y="0.5" a="0" />
+    </ports>
+  </modelobject>
+</hopsanobjectappearance>
